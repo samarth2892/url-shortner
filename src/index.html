@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function() {
+
+      $("#generate-url").click(function(e) {
+         $.post("/GenerateShortUrl", {"url": $("input[name='url']").val()})
+            .done(function(short_url) {
+            $("#short_url").text(short_url);
+            });
+            e.preventDefault();
+         });
+      });
+    </script>
+   </head>
+   <body>
+      <div align="center">
+         <h3> URL Shortner </h3>
+         <input type="text" value="" name="url"/>
+         <button id="generate-url">Generate</button>
+         <h5 id="short_url"></h5>
+      </div>
+  </body>
+</html>
