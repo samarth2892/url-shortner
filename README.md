@@ -1,7 +1,7 @@
 # URL Shortner
 
 This is service is used to create a shorter version of a given URL.
-** Currently this service only works locally. **
+**Currently this service only works locally.**
 
 ## Local Setup
 
