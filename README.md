@@ -35,12 +35,16 @@ This is service is used to create a shorter version of a given URL.
 	- Method: GET
 	- Params: N/A
 	- Response: Html form to generate short url.
-2. `/GenerateShortUrl`
+2. `/health`
+	- Method: GET
+	- Params: N/A
+	- Response: 200/OK
+3. `/GenerateShortUrl`
 	- Method: POST
 	- Params: 
 		- `url`: The URL that needs to be cut short.
 	- Response: Hash of the url
-3. `/<url_hash>`
+4. `/<url_hash>`
 	- Method: GET
 	- Params: N/A
 	- Response: 302 redirect to the original URL.
